@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "https://VOTRE-BACKEND.onrender.com/sitemap.xml" }
+    { "source": "/sitemap.xml", "destination": "https://github.com/TrMf-2005/heuralis-energy-backend/sitemap.xml" }
   ]
 }
