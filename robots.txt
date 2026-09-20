@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /commandes.html
+Disallow: /visites.html
+
+# Remplace par ton vrai domaine
+Sitemap: https://VOTRE-DOMAINE/sitemap.xml

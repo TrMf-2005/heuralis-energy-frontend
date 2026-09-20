@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Administration</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='13' fill='%23FFB400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+
+<div class="login" id="loginView" hidden>
+  <div class="panel">
+    <h1 style="font-size:1.6rem">Administration</h1>
+    <p class="muted">Saisissez le mot de passe pour accéder à l'espace administrateur.</p>
+    <form id="loginForm">
+      <div class="field"><label for="password">Mot de passe</label><input id="password" type="password" autocomplete="current-password" required></div>
+      <p class="form-msg err" id="loginMsg" role="alert"></p>
+      <button class="btn btn-sun" type="submit" style="width:100%">Se connecter</button>
+    </form>
+    <p style="margin:16px 0 0"><a href="index.html">Retour à la boutique</a></p>
+  </div>
+</div>
+
+<div id="dash" hidden>
+  <header class="admin-top">
+    <div class="wrap">
+      <div class="brand"><span data-store-name>HEURALIS's Energy</span> <small>Administration</small></div>
+      <div class="admin-actions">
+        <a class="btn btn-sun btn-sm" href="commandes.html">Voir la liste des commandes</a>
+        <a class="btn btn-line btn-sm" href="visites.html">Visites du site</a>
+        <a class="btn btn-line btn-sm" href="index.html">Voir la boutique</a>
+        <button class="btn btn-line btn-sm" type="button" id="logout">Déconnexion</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h2>Réglages de la boutique</h2>
+      <form id="settingsForm">
+        <div class="form-grid">
+          <div class="field"><label for="storeName">Nom de la boutique</label><input id="storeName" maxlength="60" required></div>
+          <div class="field"><label for="tagline">Slogan</label><input id="tagline" maxlength="120"></div>
+          <div class="field"><label for="whatsapp">Numéro WhatsApp (avec l'indicatif, chiffres seulement)</label><input id="whatsapp" inputmode="numeric" placeholder="22901XXXXXXXX" maxlength="20"></div>
+          <div class="field"><label for="city">Ville</label><input id="city" maxlength="80"></div>
+        </div>
+        <p class="form-msg" id="settingsMsg" role="status"></p>
+        <button class="btn btn-sun" type="submit">Enregistrer les réglages</button>
+      </form>
+    </section>
+
+    <section class="panel" id="formPanel">
+      <h2 id="formTitle">Ajouter un produit</h2>
+      <form id="productForm">
+        <div class="form-grid">
+          <div class="field full"><label for="name">Nom du produit</label><input id="name" maxlength="120" required></div>
+          <div class="field"><label for="category">Catégorie</label><select id="category"></select></div>
+          <div class="field"><label for="badge">Pastille</label><select id="badge"><option value="">Aucune</option><option>Nouveau</option><option>Promo</option></select></div>
+          <div class="field"><label for="price">Prix (FCFA)</label><input id="price" type="number" min="0" step="1" required></div>
+          <div class="field"><label for="oldPrice">Ancien prix (FCFA, facultatif)</label><input id="oldPrice" type="number" min="0" step="1"></div>
+          <div class="field"><label for="stock">Stock</label><input id="stock" type="number" min="0" step="1" value="1" required></div>
+          <div class="field"><label for="autonomyHours">Autonomie (heures, facultatif)</label><input id="autonomyHours" type="number" min="0" max="72" step="0.5"></div>
+          <div class="field"><label for="warranty">Garantie (ex : 12 mois)</label><input id="warranty" maxlength="60"></div>
+          <div class="field"><label class="check" style="margin-top:28px"><input id="featured" type="checkbox"> Mettre à la une sur l'accueil</label></div>
+          <div class="field full"><label for="shortDescription">Résumé (une ou deux phrases, sert aussi pour Google)</label><input id="shortDescription" maxlength="220"></div>
+          <div class="field full"><label for="description">Description détaillée</label><textarea id="description" style="min-height:140px" maxlength="5000"></textarea></div>
+          <div class="field full">
+            <label>Caractéristiques</label>
+            <div id="specs"></div>
+            <div><button class="btn btn-line btn-sm" type="button" id="addSpec">Ajouter une caractéristique</button></div>
+          </div>
+          <div class="field full">
+            <label for="imgInput">Photos (6 maximum, la première est la principale)</label>
+            <input id="imgInput" type="file" accept="image/*" multiple>
+            <div class="imgs" id="imgs"></div>
+          </div>
+        </div>
+        <p class="form-msg" id="productMsg" role="status"></p>
+        <div class="row-actions">
+          <button class="btn btn-sun" type="submit" id="saveBtn">Ajouter le produit</button>
+          <button class="btn btn-line" type="button" id="cancelEdit" hidden>Annuler la modification</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Produits en ligne</h2>
+      <div class="plist" id="plist"></div>
+    </section>
+  </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

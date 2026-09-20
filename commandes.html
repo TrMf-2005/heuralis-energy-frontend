@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Commandes — Administration</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='13' fill='%23FFB400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+<header class="admin-top">
+  <div class="wrap">
+    <div class="brand">Commandes</div>
+    <div class="admin-actions">
+      <button class="btn btn-line btn-sm" type="button" id="refresh">Actualiser</button>
+      <a class="btn btn-line btn-sm" href="admin.html">Retour à l'administration</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="filters" id="filters"></div>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>Commande</th><th>Client</th><th>Livraison</th><th>Produit</th><th>Statut</th><th></th></tr></thead>
+      <tbody id="rows"><tr><td colspan="6">Chargement…</td></tr></tbody>
+    </table>
+  </div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/commandes.js"></script>
+</body>
+</html>

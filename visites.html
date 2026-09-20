@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Visites — Administration</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='13' fill='%23FFB400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+<header class="admin-top">
+  <div class="wrap">
+    <div class="brand">Visites du site</div>
+    <div class="admin-actions">
+      <button class="btn btn-line btn-sm" type="button" id="refresh">Actualiser</button>
+      <a class="btn btn-line btn-sm" href="admin.html">Retour à l'administration</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="muted" style="margin-top:20px">Données anonymes : aucune adresse IP ni cookie. Le lieu est approximatif (déduit du fuseau horaire du navigateur). Les visites sont supprimées automatiquement après 90 jours.</p>
+  <div class="stats" id="stats"></div>
+
+  <div class="form-grid" style="align-items:start">
+    <div>
+      <h2>7 derniers jours</h2>
+      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Jour</th><th>Visiteurs</th><th>Pages vues</th></tr></thead><tbody id="days"></tbody></table></div>
+    </div>
+    <div>
+      <h2>Pages les plus vues</h2>
+      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Page</th><th>Vues</th></tr></thead><tbody id="top"></tbody></table></div>
+      <h2 style="margin-top:20px">Appareils</h2>
+      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Appareil</th><th>Vues</th></tr></thead><tbody id="devices"></tbody></table></div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:28px">Dernières visites</h2>
+  <div class="table-wrap" style="margin-bottom:48px">
+    <table class="data">
+      <thead><tr><th>Date</th><th>Page</th><th>Provenance</th><th>Appareil</th><th>Langue</th><th>Lieu approximatif</th></tr></thead>
+      <tbody id="rows"><tr><td colspan="6">Chargement…</td></tr></tbody>
+    </table>
+  </div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/visites.js"></script>
+</body>
+</html>
