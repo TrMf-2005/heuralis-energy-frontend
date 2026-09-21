@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Installation, maintenance et conseil — HEURALIS's Energy</title>
+<meta name="description" content="Faites installer votre système solaire, demandez une maintenance ou un devis pour de nouveaux équipements auprès de HEURALIS's Energy.">
+<meta property="og:title" content="Installation et maintenance solaire — HEURALIS's Energy">
+<meta property="og:description" content="Installation d'un nouveau système, maintenance, nouveaux équipements : contactez-nous.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://heuralis-energy-uzbkdbfkzbdkbdksnkd.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12263F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='13' fill='%23FFB400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10" fill="#FFB400"/><g stroke="#FFB400" stroke-width="3.5" stroke-linecap="round"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></g></svg>
+      <span data-store-name>HEURALIS's Energy</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#produits">Nos produits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <h1 style="font-size:clamp(1.9rem,4.4vw,3rem)">Installation, maintenance et conseil</h1>
+      <p class="lead" style="max-width:36em;color:var(--navy-2);font-size:1.1rem">Vous avez besoin d'aide pour votre système solaire ? Choisissez votre demande, remplissez le formulaire, et envoyez-la nous sur WhatsApp.</p>
+
+      <div class="cats" style="margin-top:28px">
+        <button type="button" class="cat" data-type="installation">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32l6-18h26l-6 18zM11 26h26M21 14l-3 18M31 14l-3 18M24 32v10M16 42h16"/></svg>
+          <span>Installer un nouveau système</span>
+          <small>Nous installons votre équipement solaire.</small>
+        </button>
+        <button type="button" class="cat" data-type="maintenance">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 8a10 10 0 0 0-9 13L8 34l6 6 13-13a10 10 0 0 0 13-9l-7 4-5-5z"/></svg>
+          <span>Maintenance de mon système</span>
+          <small>Vérification, entretien ou dépannage.</small>
+        </button>
+        <button type="button" class="cat" data-type="achat">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="32" height="20" rx="3"/><path d="M42 21v6M22 18l-5 8h7l-4 8"/></svg>
+          <span>Nouveaux équipements</span>
+          <small>Conseil et devis pour vos achats.</small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap" style="max-width:720px">
+      <div class="order-box" id="demande">
+        <h2>Faire une demande</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="type">Type de demande</label>
+              <select id="type" name="type">
+                <option value="installation">Installer un nouveau système</option>
+                <option value="maintenance">Maintenance de mon système</option>
+                <option value="achat">Nouveaux équipements (conseil / devis)</option>
+              </select>
+            </div>
+            <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="family-name" required maxlength="60"></div>
+            <div class="field"><label for="prenom">Prénom</label><input id="prenom" name="prenom" autocomplete="given-name" required maxlength="60"></div>
+            <div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" autocomplete="tel" required maxlength="25"></div>
+            <div class="field"><label for="adresse">Ville ou quartier</label><input id="adresse" name="adresse" autocomplete="address-level2" required maxlength="150"></div>
+            <div class="field full"><label for="message">Décrivez votre besoin</label><textarea id="message" name="message" maxlength="500" placeholder="Ex : je veux installer 2 panneaux, ma batterie ne charge plus…"></textarea></div>
+          </div>
+          <button class="btn btn-sun" type="submit" style="width:100%;margin-top:16px">Envoyer ma demande sur WhatsApp</button>
+          <p class="muted" style="margin:12px 0 0;font-size:.92rem">WhatsApp s'ouvre avec votre message déjà écrit. Appuyez sur « Envoyer » dans WhatsApp pour nous le transmettre.</p>
+          <p class="form-msg" id="formMsg" role="alert"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h3 data-store-name>HEURALIS's Energy</h3>
+        <p data-tagline>Votre énergie, sans coupure</p>
+        <a class="btn btn-sun btn-sm" data-wa href="#" hidden>Nous écrire sur WhatsApp</a>
+      </div>
+      <div>
+        <h3>Boutique</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#produits">Nos produits</a></li>
+          <li><a href="services.html">Installation et maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+          <li><a href="admin.html">Administration</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> <span data-store-name>HEURALIS's Energy</span></span>
+      <span>Réalisé par TWO TF's Codes</span>
+    </div>
+  </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/banner.js"></script>
+<script src="js/tracker.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>
