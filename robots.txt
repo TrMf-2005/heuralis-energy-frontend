@@ -5,4 +5,4 @@ Disallow: /commandes.html
 Disallow: /visites.html
 
 # Remplace par ton vrai domaine
-Sitemap: https://VOTRE-DOMAINE/sitemap.xml
+Sitemap: https://heuralis-energy-uzbkdbfkzbdkbdksnkd.vercel.app/sitemap.xml
